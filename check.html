@@ -12,32 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;700&family=Noto+Sans+Malayalam:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Firebase Configuration (Updated with Firestore for Signup) -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
-        // Import Firestore for Signup (FIXED: Consistent version 10.13.1)
-        import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
-
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyA9Q1-_604mrZ4XeddMz2n0S5umTuLLuic",
-            authDomain: "login-6e27a.firebaseapp.com",
-            projectId: "login-6e27a",
-            storageBucket: "login-6e27a",
-            messagingSenderId: "728070142896",
-            appId: "1:728070142896:web:ccfdd02a1bb5abff1af475"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        window.auth = getAuth(app);
-        window.db = getFirestore(app);
-        
-        // Expose Firebase functions to global scope for use in inline scripts
-        window.signInWithEmailAndPassword = signInWithEmailAndPassword;
-        window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
-        window.setDoc = setDoc;
-        window.doc = doc;
-    </script>
 
     <script>
         tailwind.config = {
